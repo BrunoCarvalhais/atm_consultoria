@@ -10,6 +10,56 @@ class TelaContato extends StatefulWidget {
 class _TelaContatoState extends State<TelaContato> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: Text("Contato"),
+        backgroundColor: Colors.green,
+      ),
+      body: SingleChildScrollView(
+        child: Container(
+          padding: EdgeInsets.all(16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Row(
+                children: [
+                  Image.asset("images/detalhe_contato.png"),
+                  Padding(
+                    padding: EdgeInsets.only(left: 10),
+                    child: Text(
+                      "Contatos",
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.blueGrey,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 16),
+                child: Text(
+                  "E-mail: contato@atm.com.br",
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 16),
+                child: Text(
+                  "Telefone: (31) 3358-8524",
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 16),
+                child: Text(
+                  "Celular: (31) 9999-8741",
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
